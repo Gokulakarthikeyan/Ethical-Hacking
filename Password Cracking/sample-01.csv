@@ -1,0 +1,9 @@
+
+BSSID, First time seen, Last time seen, channel, Speed, Privacy, Cipher, Authentication, Power, # beacons, # IV, LAN IP, ID-length, ESSID, Key
+74:DA:DA:0E:3A:DB, 2023-04-30 18:56:45, 2023-04-30 21:19:39,  1, 270, WPA2, CCMP TKIP, PSK, -58,    83449,    23048, 192.168. 29. 88,   5, Gokul, 
+
+Station MAC, First time seen, Last time seen, Power, # packets, BSSID, Probed ESSIDs
+86:F6:DC:4E:FF:A5, 2023-04-30 19:02:14, 2023-04-30 20:55:19, -52,    24303, 74:DA:DA:0E:3A:DB,
+9A:7D:57:76:B0:1B, 2023-04-30 20:03:43, 2023-04-30 20:04:19, -46,       28, 74:DA:DA:0E:3A:DB,Gokul
+96:DF:46:CF:A4:EE, 2023-04-30 20:36:45, 2023-04-30 20:37:21, -95,       17, 74:DA:DA:0E:3A:DB,
+

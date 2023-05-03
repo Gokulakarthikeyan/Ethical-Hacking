@@ -1,0 +1,170 @@
+┌──(asgkarthi1508㉿DESKTOP-PSESBRH)-[~]
+└─$ nmap 172.16.104.1
+Starting Nmap 7.93 ( https://nmap.org ) at 2023-04-26 08:43 IST
+Nmap scan report for 172.16.104.1
+Host is up (0.0082s latency).
+Not shown: 996 closed tcp ports (conn-refused)
+PORT    STATE SERVICE
+22/tcp  open  ssh
+23/tcp  open  telnet
+80/tcp  open  http
+443/tcp open  https
+
+Nmap done: 1 IP address (1 host up) scanned in 3.46 seconds
+
+┌──(asgkarthi1508㉿DESKTOP-PSESBRH)-[~]
+└─$ nmap -F 172.16.104.1
+Starting Nmap 7.93 ( https://nmap.org ) at 2023-04-26 08:43 IST
+Nmap scan report for 172.16.104.1
+Host is up (0.21s latency).
+Not shown: 96 closed tcp ports (conn-refused)
+PORT    STATE SERVICE
+22/tcp  open  ssh
+23/tcp  open  telnet
+80/tcp  open  http
+443/tcp open  https
+
+Nmap done: 1 IP address (1 host up) scanned in 3.41 seconds
+
+┌──(asgkarthi1508㉿DESKTOP-PSESBRH)-[~]
+└─$ nmap -p 22 172.16.104.1
+Starting Nmap 7.93 ( https://nmap.org ) at 2023-04-26 08:45 IST
+Nmap scan report for 172.16.104.1
+Host is up (0.0053s latency).
+
+PORT   STATE SERVICE
+22/tcp open  ssh
+
+Nmap done: 1 IP address (1 host up) scanned in 1.10 seconds
+
+┌──(asgkarthi1508㉿DESKTOP-PSESBRH)-[~]
+└─$ nmap -p 22,23,80,443 172.16.104.1
+Starting Nmap 7.93 ( https://nmap.org ) at 2023-04-26 08:45 IST
+Nmap scan report for 172.16.104.1
+Host is up (0.0037s latency).
+
+PORT    STATE SERVICE
+22/tcp  open  ssh
+23/tcp  open  telnet
+80/tcp  open  http
+443/tcp open  https
+
+Nmap done: 1 IP address (1 host up) scanned in 1.08 seconds
+
+┌──(asgkarthi1508㉿DESKTOP-PSESBRH)-[~]
+└─$ nmap -p 1-15 172.16.104.1
+Starting Nmap 7.93 ( https://nmap.org ) at 2023-04-26 08:47 IST
+Nmap scan report for 172.16.104.1
+Host is up (0.015s latency).
+
+PORT   STATE  SERVICE
+1/tcp  closed tcpmux
+2/tcp  closed compressnet
+3/tcp  closed compressnet
+4/tcp  closed unknown
+5/tcp  closed rje
+6/tcp  closed unknown
+7/tcp  closed echo
+8/tcp  closed unknown
+9/tcp  closed discard
+10/tcp closed unknown
+11/tcp closed systat
+12/tcp closed unknown
+13/tcp closed daytime
+14/tcp closed unknown
+15/tcp closed netstat
+
+Nmap done: 1 IP address (1 host up) scanned in 1.12 seconds
+
+┌──(asgkarthi1508㉿DESKTOP-PSESBRH)-[~]
+└─$ nmap -p mysql,https,ftp  172.16.104.1
+Starting Nmap 7.93 ( https://nmap.org ) at 2023-04-26 08:49 IST
+Nmap scan report for 172.16.104.1
+Host is up (0.0037s latency).
+
+PORT     STATE  SERVICE
+21/tcp   closed ftp
+443/tcp  open   https
+3306/tcp closed mysql
+
+Nmap done: 1 IP address (1 host up) scanned in 1.10 seconds
+
+┌──(asgkarthi1508㉿DESKTOP-PSESBRH)-[~]
+└─$ nmap -A 172.16.104.1
+Starting Nmap 7.93 ( https://nmap.org ) at 2023-04-26 08:51 IST
+Nmap scan report for 172.16.104.1
+Host is up (0.0073s latency).
+Not shown: 996 closed tcp ports (conn-refused)
+PORT    STATE SERVICE  VERSION
+22/tcp  open  ssh      Cisco SSH 1.25 (protocol 1.99)
+23/tcp  open  telnet   Cisco router telnetd
+80/tcp  open  http     nginx
+|_http-title: Site doesn't have a title (text/html; charset=utf-8).
+443/tcp open  ssl/http nginx
+| tls-nextprotoneg: 
+|_  http/1.1
+| ssl-cert: Subject: commonName=IOS-Self-Signed-Certificate-2593871166
+| Not valid before: 2020-08-22T15:58:16
+|_Not valid after:  2030-01-01T00:00:00
+|_ssl-date: TLS randomness does not represent time
+|_http-title: Site doesn't have a title (text/html; charset=utf-8).
+Service Info: OS: IOS; Device: router; CPE: cpe:/o:cisco:ios
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 32.60 seconds
+
+┌──(asgkarthi1508㉿DESKTOP-PSESBRH)-[~]
+└─$ nmap -F -oN /home/asgkarthi1508/Desktop/Port_Scan.txt 172.16.104.1
+Starting Nmap 7.93 ( https://nmap.org ) at 2023-04-26 08:56 IST
+Nmap scan report for 172.16.104.1
+Host is up (0.40s latency).
+Not shown: 96 closed tcp ports (conn-refused)
+PORT    STATE SERVICE
+22/tcp  open  ssh
+23/tcp  open  telnet
+80/tcp  open  http
+443/tcp open  https
+
+Nmap done: 1 IP address (1 host up) scanned in 3.47 seconds
+
+
+┌──(asgkarthi1508㉿DESKTOP-PSESBRH)-[~]
+└─$ nmap -sV -sC 172.16.104.1
+Starting Nmap 7.93 ( https://nmap.org ) at 2023-04-26 10:51 IST
+Stats: 0:00:01 elapsed; 0 hosts completed (0 up), 1 undergoing Ping Scan
+Parallel DNS resolution of 1 host. Timing: About 0.00% done
+Stats: 0:00:01 elapsed; 0 hosts completed (1 up), 1 undergoing Connect Scan
+Connect Scan Timing: About 4.85% done; ETC: 10:51 (0:00:00 remaining)
+Stats: 0:00:01 elapsed; 0 hosts completed (1 up), 1 undergoing Connect Scan
+Connect Scan Timing: About 6.85% done; ETC: 10:51 (0:00:00 remaining)
+Stats: 0:00:02 elapsed; 0 hosts completed (1 up), 1 undergoing Connect Scan
+Connect Scan Timing: About 16.65% done; ETC: 10:51 (0:00:05 remaining)
+Stats: 0:00:04 elapsed; 0 hosts completed (1 up), 1 undergoing Connect Scan
+Connect Scan Timing: About 21.80% done; ETC: 10:51 (0:00:07 remaining)
+Stats: 0:00:13 elapsed; 0 hosts completed (1 up), 1 undergoing Service Scan
+Service scan Timing: About 50.00% done; ETC: 10:51 (0:00:06 remaining)
+Stats: 0:00:32 elapsed; 0 hosts completed (1 up), 1 undergoing Service Scan
+Service scan Timing: About 100.00% done; ETC: 10:51 (0:00:00 remaining)
+Nmap scan report for 172.16.104.1
+Host is up (0.013s latency).
+Not shown: 996 closed tcp ports (conn-refused)                                                                                                                        
+PORT    STATE SERVICE   VERSION
+22/tcp  open  ssh       Cisco SSH 1.25 (protocol 1.99)
+| ssh-hostkey: 
+|_  1024 7c8957b4631b5edb75c2794659945ab2 (RSA)
+23/tcp  open  telnet    Cisco router telnetd (password required but not set)
+80/tcp  open  http      nginx
+|_http-title: Site doesn't have a title (text/html; charset=utf-8).
+443/tcp open  ssl/https nginx
+|_http-server-header: nginx
+|_ssl-date: TLS randomness does not represent time
+|_http-title: Site doesn't have a title (text/html; charset=utf-8).
+| tls-nextprotoneg: 
+|_  http/1.1
+| ssl-cert: Subject: commonName=IOS-Self-Signed-Certificate-2593871166
+| Not valid before: 2020-08-22T15:58:16
+|_Not valid after:  2030-01-01T00:00:00
+Service Info: OS: IOS; Device: router; CPE: cpe:/o:cisco:ios
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 42.04 seconds

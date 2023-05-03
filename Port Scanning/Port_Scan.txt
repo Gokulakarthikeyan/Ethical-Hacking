@@ -1,0 +1,11 @@
+# Nmap 7.93 scan initiated Wed Apr 26 08:56:23 2023 as: nmap -F -oN /home/asgkarthi1508/Desktop/Port_Scan.txt 172.16.104.1
+Nmap scan report for 172.16.104.1
+Host is up (0.40s latency).
+Not shown: 96 closed tcp ports (conn-refused)
+PORT    STATE SERVICE
+22/tcp  open  ssh
+23/tcp  open  telnet
+80/tcp  open  http
+443/tcp open  https
+
+# Nmap done at Wed Apr 26 08:56:26 2023 -- 1 IP address (1 host up) scanned in 3.47 seconds
